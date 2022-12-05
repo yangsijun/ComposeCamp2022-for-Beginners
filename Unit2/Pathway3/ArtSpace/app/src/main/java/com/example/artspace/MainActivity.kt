@@ -50,17 +50,21 @@ fun ArtSpace() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = 24.dp)
+            .padding(horizontal = 24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth()
+                .wrapContentSize(
+                    align = Alignment.Center,
+                    unbounded = false
+                )
                 .weight(1f),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Surface(
                 modifier = Modifier
-                    .fillMaxWidth()
+                    .wrapContentWidth(Alignment.CenterHorizontally)
                     .shadow(8.dp)
                     .border(BorderStroke(1.dp, MaterialTheme.colors.onSurface))
             ) {
@@ -68,11 +72,11 @@ fun ArtSpace() {
                     painter = painterResource(id = image),
                     contentDescription = stringResource(id = imageDescription),
                     modifier = Modifier
-                        .fillMaxWidth()
                         .padding(32.dp),
                 )
             }
         }
+        Spacer(modifier = Modifier.height(16.dp))
         Surface(
             modifier = Modifier
                 .wrapContentSize(),
@@ -81,7 +85,6 @@ fun ArtSpace() {
         ) {
             Column(
                 modifier = Modifier
-                    .fillMaxWidth()
                     .padding(16.dp),
                 horizontalAlignment = Alignment.Start,
             ) {
@@ -107,8 +110,7 @@ fun ArtSpace() {
         )
         Row(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
+                .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Button(
@@ -119,12 +121,10 @@ fun ArtSpace() {
                     artworkTitle = getArtworkTitle(page)
                     artistName = getArtistName(page)
                 },
-                modifier = Modifier
-                    .weight(1f)
+                modifier = Modifier.width(150.dp)
             ) {
                 Text(text = stringResource(id = R.string.previous_button_text))
             }
-            Spacer(Modifier.width(16.dp))
             Button(
                 onClick = {
                     page = nextButtonAction(page)
@@ -133,12 +133,11 @@ fun ArtSpace() {
                     artworkTitle = getArtworkTitle(page)
                     artistName = getArtistName(page)
                 },
-                modifier = Modifier
-                    .weight(1f)
+                modifier = Modifier.width(150.dp)
             ) {
                 Text(text = stringResource(id = R.string.next_button_text))
             }
-        }
+    }
     }
 }
 
