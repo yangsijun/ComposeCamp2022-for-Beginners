@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Art Space</string>
+    <string name="image_description_artwork1">Image of Gute Freunde (1904)</string>
+    <string name="image_description_artwork2">Image of The Luxembourg Gardens</string>
+    <string name="image_description_artwork3">Image of The Judgement of Midas (C. 1640)</string>
+    <string name="title_artwork1">Gute Freunde (1904)</string>
+    <string name="title_artwork2">The Luxembourg Gardens</string>
+    <string name="title_artwork3">The Judgement of Midas (C. 1640)</string>
+    <string name="artist_artwork1">Hermann Kern (Austrian, 1838-1912)</string>
+    <string name="artist_artwork2">Victor Gabriel Gilbert (French, 1847–1933)</string>
+    <string name="artist_artwork3">Jan Van Den Hoecke (Flemish, 1611 - 1651)</string>
+    <string name="previous_button_text">Previous</string>
+    <string name="next_button_text">Next</string>
+</resources>
